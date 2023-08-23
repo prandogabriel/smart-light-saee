@@ -45,6 +45,9 @@ void app_main(void)
         printf("Restarting in %d seconds...\n", i);
         vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
+    
+    printf("Configured Wi-Fi SSID is %s\n", CONFIG_ESP_WIFI_SSID);
+
     printf("Restarting now.\n");
     fflush(stdout);
     esp_restart();
